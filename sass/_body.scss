@@ -1,0 +1,28 @@
+body {
+    @include align-center(center);
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
+    & .clock {
+        width: 200%;
+        height: 200%;
+        background-image: $clock;
+        z-index: -1;
+        bottom: 50%;
+        left: -045%;
+        position: absolute;
+        animation: rotate 3s linear infinite;
+        transform-origin: bottom center;
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
